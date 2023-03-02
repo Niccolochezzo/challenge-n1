@@ -1,0 +1,227 @@
+:root {
+  --Strongcyan: hsl(172, 67%, 45%);
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--Lightgrayishcyan);
+}
+
+.calcBoard {
+  background: var(--White);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 40px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+
+.left > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calcBoard span {
+  color: var(--Darkgrayishcyan);
+  font-weight: 700;
+}
+
+.bill > div {
+  position: relative;
+}
+
+.bill > div input {
+  padding: 10px 10px;
+  width: 100%;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background: var(--Verylightgrayishcyan);
+  color: var(--VeryDarkCyan);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.bill > div input:focus {
+  border: 2px solid var(--Strongcyan);
+  outline: none;
+}
+
+.bill > div img {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 10px;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.percentage > button {
+  width: 31%;
+  padding-block: 11px;
+  margin-top: 12px;
+  background: var(--VeryDarkCyan);
+  color: var(--White);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.percentage > button:hover {
+  cursor: pointer;
+  background: var(--Lightgrayishcyan);
+  color: var(--VeryDarkCyan);
+}
+
+.percentage > input {
+  width: 32%;
+  padding: 8px 10px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background: var(--Verylightgrayishcyan);
+  color: var(--VeryDarkCyan);
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.percentage > input:focus {
+  border: 2px solid var(--Strongcyan);
+  outline: none;
+}
+
+.numOfPeople > div {
+  position: relative;
+}
+
+.numOfPeople > div input {
+  padding: 10px 10px;
+  width: 100%;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background: var(--Verylightgrayishcyan);
+  color: var(--VeryDarkCyan);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.numOfPeople > div input:focus {
+  border: 2px solid var(--Strongcyan);
+  outline: none;
+}
+
+.numOfPeople > div img {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  width: 10px;
+}
+
+.red-border {
+  border: 2px solid rgb(253, 103, 103) !important;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert > p {
+  color: rgb(253, 103, 103);
+  font-weight: 700;
+}
+
+.right {
+  width: 400px;
+  background: var(--VeryDarkCyan);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.right .rightWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.right .tipAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right .tipAmount > p {
+  color: var(--White);
+  font-weight: 700;
+  word-spacing: 3px;
+  font-size: 18px;
+}
+
+.right .tipAmount > .totals {
+  font-size: 44px;
+  color: var(--Strongcyan);
+  font-weight: 700;
+}
+
+.right > button {
+  border: none;
+  border-radius: 5px;
+  background: var(--Strongcyan);
+  padding-block: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--VeryDarkCyan);
+  letter-spacing: 1.2px;
+  transition: all 0.3s ease;
+}
+
+.right > button:hover {
+  background: var(--Lightgrayishcyan);
+  cursor: pointer;
+}
+
+.disabled {
+  background: var(--Darkgrayishcyan) !important;
+}
